@@ -136,3 +136,21 @@ int main(int argc, char* argv[])
     
 }
 // 046 - ReferenceType.cpp - 참조형 변수 사용
+
+
+#include <iostream>
+using namespace std;
+
+void TetstFunc(int& rParam) {
+    rParam = 100;
+}
+
+int main(int argc, char* argv[])
+{
+    int nData = 0;
+    TetstFunc(nData);
+    cout << nData << endl;
+    return 0; 
+}
+// 048 - CallByReference.cpp - 참조에 의한 호출
+

@@ -1,19 +1,15 @@
 ﻿#include <iostream>
 using namespace std;
 
+void TetstFunc(int& rParam) {
+    rParam = 100;
+}
+
 int main(int argc, char* argv[])
 {
-    int nData = 10;
-    
-    int& ref = nData;
-    ref = 20;
+    int nData = 0;
+    TetstFunc(nData);
     cout << nData << endl;
-
-    int* pnData = &nData;
-    *pnData = 30;
-    cout << nData << endl;
-
-    return 0;
-    
+    return 0; 
 }
-// 046 - ReferenceType.cpp - 참조형 변수 사용
+// 048 - CallByReference.cpp - 참조에 의한 호출
