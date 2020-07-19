@@ -1,19 +1,25 @@
 ﻿#include <iostream>
 using namespace std;
 
-void Swap(int& a, int& b) {
-    int nTmp = a;
-    a = b;
-    b = nTmp;
+int TestFunc(int nParam) {
+    int nResult = nParam * 2;
+    return nResult;
 }
+
 int main(int argc, char* argv[])
 { 
-    int x = 10, y = 20;
-    Swap(x, y);
+    int  nInput = 0;
+    cout << "Input number: ";
+    cin >> nInput;
 
-    cout << "x: " << x << endl;
-    cout << "y: " << y << endl;
+    int&& rdata = nInput + 5;
+    cout << rdata << endl;
+
+    int&& result = TestFunc(10);
+
+    result += 10;
+    cout << result << endl;
     return 0; 
 
 }
-// 049 - ReferenceSwap.cpp - 참조 전달
+// 050- RvalueSample.cpp - r-value 참조
