@@ -1,25 +1,23 @@
 ﻿#include <iostream>
 using namespace std;
 
-int TestFunc(int nParam) {
-    int nResult = nParam * 2;
-    return nResult;
-}
-
 int main(int argc, char* argv[])
-{ 
-    int  nInput = 0;
-    cout << "Input number: ";
-    cin >> nInput;
+{
+	int aList[5] = { 10,20,30,40,50 };
 
-    int&& rdata = nInput + 5;
-    cout << rdata << endl;
+	for (int i = 0;i < 5;++i)
+		cout << aList[i] << ' ';
+	cout << endl;
 
-    int&& result = TestFunc(10);
+	for (auto n : aList)
+		cout << n << ' ';
 
-    result += 10;
-    cout << result << endl;
-    return 0; 
+	cout << endl;
 
+	for (auto& n : aList)
+		cout << n << ' ';
+
+	cout << endl;
+	return 0;
 }
-// 050- RvalueSample.cpp - r-value 참조
+// 052- RangeBasedfor.cpp - 범위 기반 for문
