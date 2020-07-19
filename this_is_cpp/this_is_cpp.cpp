@@ -1,16 +1,19 @@
 ﻿#include <iostream>
+using namespace std;
 
 int main(int argc, char* argv[])
 {
-    int* pData = new int;
-    int* pNewData = new int(10);
+    int* arr = new int[5];
 
-    *pData = 5;
-    std::cout << *pData << std::endl;
-    std::cout << *pNewData << std::endl;
+    for (int i = 0;i < 5;i++)
+        arr[i] = (i + 1) * 10;
 
-    delete  pData;
-    delete pNewData;
+    for (int i = 0;i < 5;i++)
+        cout << arr[i] << endl;
 
+    delete[]    arr;
+    return 0;
+    
 }
-// 043 - NewDeleteSample.cpp - new 연산자 사용
+// 044 - NewDeleteArray.cpp - 배열 형태의 객체 생성
+ 
