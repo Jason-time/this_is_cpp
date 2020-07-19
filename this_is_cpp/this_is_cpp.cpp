@@ -1,15 +1,19 @@
 ﻿#include <iostream>
 using namespace std;
 
-void TetstFunc(int& rParam) {
-    rParam = 100;
+void Swap(int& a, int& b) {
+    int nTmp = a;
+    a = b;
+    b = nTmp;
 }
-
 int main(int argc, char* argv[])
-{
-    int nData = 0;
-    TetstFunc(nData);
-    cout << nData << endl;
+{ 
+    int x = 10, y = 20;
+    Swap(x, y);
+
+    cout << "x: " << x << endl;
+    cout << "y: " << y << endl;
     return 0; 
+
 }
-// 048 - CallByReference.cpp - 참조에 의한 호출
+// 049 - ReferenceSwap.cpp - 참조 전달
