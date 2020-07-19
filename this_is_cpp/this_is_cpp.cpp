@@ -1,14 +1,16 @@
-﻿#include <string>
-#include <cstdio>
-#include <iostream>
+﻿#include <iostream>
 
 int main(int argc, char* argv[])
-{ 
-    int a = 10;
-    int b(a);
-    auto c(b);
+{
+    int* pData = new int;
+    int* pNewData = new int(10);
 
-    std::cout << a + b + c << std::endl;
-    return 0;
+    *pData = 5;
+    std::cout << *pData << std::endl;
+    std::cout << *pNewData << std::endl;
+
+    delete  pData;
+    delete pNewData;
+
 }
-// 042 - AutoSample.cpp - auto 예약어 사용
+// 043 - NewDeleteSample.cpp - new 연산자 사용

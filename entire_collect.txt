@@ -79,3 +79,20 @@ int main(int argc, char* argv[])
     return 0;
 }
 // 042 - AutoSample.cpp - auto 예약어 사용
+
+#include <iostream>
+
+int main(int argc, char* argv[])
+{
+    int* pData = new int;
+    int* pNewData = new int(10);
+
+    *pData = 5;
+    std::cout << *pData << std::endl;
+    std::cout << *pNewData << std::endl;
+
+    delete  pData;
+    delete pNewData;
+
+}
+// 043 - NewDeleteSample.cpp - new 연산자 사용
