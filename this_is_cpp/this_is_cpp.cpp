@@ -1,26 +1,15 @@
 ﻿#include <iostream>
 using namespace std;
 
-void TestFunc(void) { cout << "::TestFunc()" << endl; }
-namespace TEST {
-	void TestFunc(void) {
-		cout << "TEST::TestFunc()" << endl;
-	}
-}
+int nData(20);
 
-namespace MYDATA {
-	void TestFunc(void) {
-		cout << "DATA::TestFunc()" << endl;
-	}
-}
-
-int main(int argc, char* argv[])
+ int main(int argc, char* argv[])
 {
-	TestFunc();
-	::TestFunc();
-	TEST::TestFunc();
-	MYDATA::TestFunc();
+	 int nData(10);
+
+	 cout << nData << endl;
+	 cout << argc << endl;
 
 	return 0;
 }
-// 081 - NamespaceOver.cpp - 네임스페이스를 포함한 다중 정의 
+// 085 - IdSearchSeq1.cpp - 식별자에 접근하는 코드가 속한 블록 범위
