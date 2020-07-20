@@ -1,18 +1,19 @@
 ﻿#include <iostream>
 using namespace std;
 
+int nData = 200;
+
+namespace TEST {
+	int nData = 100;
+	void TestFunc(void) {
+		cout << nData << endl;
+	}
+}
+
  int main(int argc, char* argv[])
 {
-	 int nInput = 0;
-	 cout << "11이상의 정수를 입력하세요" << endl;
-	 cin >> nInput;
-
-	 if (nInput > 10) {
-		 cout << nInput << endl;
-	 }
-	 else
-		 cout << "Error" << endl;
+	 TEST::TestFunc();
 	 
 	return 0;
 }
-// 086 - IdSearchSeq2.cpp - 범위 검색의 확장
+// 087 - IdSearchSeq3.cpp - 네임스페이스와 전역 변수의 검색 우선권
