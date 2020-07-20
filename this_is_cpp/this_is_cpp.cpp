@@ -1,25 +1,17 @@
 ﻿#include <iostream>
 using namespace std;
 
-int Add(int a, int b, int c) {
-	std::cout << "Add(int, int, int): ";
-	return a + b + c;
+void TestFunc(int a) {
+	std::cout << "TestFunc(int)" << std::endl;
 }
 
-int Add(int a, int b ) {
-	std::cout << "Add(int, int): ";
-	return a + b ;
-}
-double Add(double a, double b ) {
-	std::cout << "Add(double,double): ";
-	return a + b ;
+void TestFunc(int a,int b=10) {
+	std::cout << "TestFunc(int,int)" << std::endl;
 }
 int main(int argc, char* argv[])
 {
-	std::cout << Add(3,4) << std::endl;
-	std::cout << Add(3,4,5) << std::endl;
-	std::cout << Add(3.3,4.4) << std::endl;
+	TestFunc(5);
 
 	return 0;
 }
-// 064 - FuncPoly.cpp - Add() 함수의 다중 정의
+// 067 - FuncAmbiguity.cpp - 디폴트 매개변수와 다중 정의가 조합되었을때의 모호성 
