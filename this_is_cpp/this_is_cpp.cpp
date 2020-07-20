@@ -3,16 +3,20 @@
 using namespace std;
 namespace TEST {
 	int g_nData = 100;
-	void TestFunc(void) {
-		cout << "TEST::TestFunc()" << endl;
+	namespace DEV {
+		int g_nData = 200;
+		namespace WIN{
+			int g_nData = 300;
+
+		}
 	}
 }
-using namespace TEST;
 
 int main(int argc, char* argv[])
 {
-	TestFunc();
-	cout << g_nData << endl;
+	cout << TEST::g_nData << endl;
+	cout << TEST::DEV::g_nData << endl;
+	cout << TEST::DEV::WIN::g_nData << endl;
 	return 0;
 }
-// 077 - NamespaceUsing.cpp - using 선언 
+// 080 - NamespaceNested.cpp - 네임스페이스의 중첩 
