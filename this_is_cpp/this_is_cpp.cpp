@@ -1,22 +1,26 @@
 ﻿#include <iostream>
-
 using namespace std;
-namespace TEST {
-	int g_nData = 100;
-	namespace DEV {
-		int g_nData = 200;
-		namespace WIN{
-			int g_nData = 300;
 
-		}
+void TestFunc(void) { cout << "::TestFunc()" << endl; }
+namespace TEST {
+	void TestFunc(void) {
+		cout << "TEST::TestFunc()" << endl;
+	}
+}
+
+namespace MYDATA {
+	void TestFunc(void) {
+		cout << "DATA::TestFunc()" << endl;
 	}
 }
 
 int main(int argc, char* argv[])
 {
-	cout << TEST::g_nData << endl;
-	cout << TEST::DEV::g_nData << endl;
-	cout << TEST::DEV::WIN::g_nData << endl;
+	TestFunc();
+	::TestFunc();
+	TEST::TestFunc();
+	MYDATA::TestFunc();
+
 	return 0;
 }
-// 080 - NamespaceNested.cpp - 네임스페이스의 중첩 
+// 081 - NamespaceOver.cpp - 네임스페이스를 포함한 다중 정의 
