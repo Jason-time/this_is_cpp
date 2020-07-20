@@ -362,3 +362,23 @@ int main(int argc, char* argv[])
 	return 0;
 }
 // 075 - NamespaceSample.cpp - 네임스페이스 선언 및 정의
+
+
+#include <iostream>
+
+using namespace std;
+namespace TEST {
+	int g_nData = 100;
+	void TestFunc(void) {
+		cout << "TEST::TestFunc()" << endl;
+	}
+}
+using namespace TEST;
+
+int main(int argc, char* argv[])
+{
+	TestFunc();
+	cout << g_nData << endl;
+	return 0;
+}
+// 077 - NamespaceUsing.cpp - using 선언 

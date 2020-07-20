@@ -1,15 +1,18 @@
 ﻿#include <iostream>
 
+using namespace std;
 namespace TEST {
 	int g_nData = 100;
-	void TesstFunc(void) {
-		std::cout << "TEST::TestFunc()" << std::endl;
+	void TestFunc(void) {
+		cout << "TEST::TestFunc()" << endl;
 	}
 }
+using namespace TEST;
+
 int main(int argc, char* argv[])
 {
-	TEST::TesstFunc();
-	std::cout << TEST::g_nData << std::endl;
+	TestFunc();
+	cout << g_nData << endl;
 	return 0;
 }
-// 075 - NamespaceSample.cpp - 네임스페이스 선언 및 정의
+// 077 - NamespaceUsing.cpp - using 선언 
