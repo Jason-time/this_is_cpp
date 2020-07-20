@@ -1,15 +1,18 @@
 ﻿#include <iostream>
 using namespace std;
 
-int nData(20);
-
  int main(int argc, char* argv[])
 {
-	 int nData(10);
+	 int nInput = 0;
+	 cout << "11이상의 정수를 입력하세요" << endl;
+	 cin >> nInput;
 
-	 cout << nData << endl;
-	 cout << argc << endl;
-
+	 if (nInput > 10) {
+		 cout << nInput << endl;
+	 }
+	 else
+		 cout << "Error" << endl;
+	 
 	return 0;
 }
-// 085 - IdSearchSeq1.cpp - 식별자에 접근하는 코드가 속한 블록 범위
+// 086 - IdSearchSeq2.cpp - 범위 검색의 확장
