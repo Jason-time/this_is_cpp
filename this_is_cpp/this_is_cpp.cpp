@@ -2,15 +2,12 @@
 using namespace std;
 
 template<typename T>
-T TestFunc(T a) {
-	std::cout << "매개변수 a:" << a << std::endl;
-	return a;
+T Add(T a,T b) {
+	return a+b;
 }
 int main(int argc, char* argv[])
 {
-	std::cout << "int\t" << TestFunc(3) << std::endl;
-	std::cout << "double\t" << TestFunc(3.3) << std::endl;
-	std::cout << "char\t" << TestFunc('A') << std::endl;
-	std::cout << "char*\t" << TestFunc("TestString") << std::endl;
+	std::cout << Add(3,4) << std::endl;
+	std::cout << Add(3.3,4.4)  << std::endl;
 }
-// 069 - FuncTemplate1.cpp - 템플릿 함수 
+// 070 - FuncTemplate2.cpp - 함수 템플릿으로 만든 Add() 함수
