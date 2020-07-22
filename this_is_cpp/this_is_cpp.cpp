@@ -2,18 +2,22 @@
 using namespace std;
 
 class CTest {
+	int m_nData;
 public:
 	CTest() {
 		cout << "CTest::CTest()" << endl;
 	}
 	~CTest() {
-		cout << "~CTest::CTest" << endl;
+		cout << "~CTest::CTest() " << endl;
 	}
 };
+
 int main(int argc, char* argv[]) {
 	cout << "Begin" << endl;
-	CTest a;
+	CTest* pData = new CTest;
+	cout << "Test" << endl;
+	delete pData;
 	cout << "End" << endl;
 	return 0;
 }
-// 121 - Constructor1.cpp - 생성자와 소멸자
+// 125 - ClassNew.cpp - new와 delete 연산자 사용
