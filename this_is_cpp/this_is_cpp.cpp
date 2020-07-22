@@ -1,22 +1,23 @@
 ﻿#include <iostream>
 using namespace std;
 
-class CRefTest{
+class CMyData{
 
 public:
-	CRefTest(int& rParam) :m_nData(rParam) { };
+	CMyData(int nParam) :m_nData(nParam) { };
+	CMyData(int x, int y) :m_nData(x+y) { };
 	int GetData(void) { return m_nData; }
 private:
-	int& m_nData;
+	int m_nData;
 };
 
 int main(int argc, char* argv[]) {
-	int a = 10;
-	CRefTest t(a);
-	cout << t.GetData() << endl;
+	CMyData a(10);
+	CMyData b(3, 4);
 
-	a = 20;
-	cout << t.GetData() << endl;
+	cout << a.GetData() << endl;
+	cout << b.GetData() << endl;
+
 	return 0;
 }
-// 128 - RefSample.cpp - 참조자와 선언을 위한 생성자 초기화 목록 이용
+// 130 - ConstructorOver1.cpp - 생성자 다중 정의
