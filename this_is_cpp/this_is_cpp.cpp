@@ -1,38 +1,24 @@
 ﻿#include <iostream>
 using namespace std;
 
-class CMyPoint{
+class CMyData{
 
 public:
-	CMyPoint(int x) {
-		cout << "CMyPoint(int)" << endl;
-		if (x > 100)
-			x = 100;
-		m_x = 100;	
-	}
-	CMyPoint(int x, int y)
-		:CMyPoint(x) {
-		cout << "CMyPoint(int,int)" << endl;
-		if (y > 200)
-			y = 200;
-
-		m_y = 200;
-	}
-	void Print() {
-		cout << "X:" << m_x << endl;
-		cout << "Y:" << m_y<< endl;
+	CMyData(int nParam) :m_nData(nParam) {};
+	void PrintData() {
+		cout << m_nData << endl;
+		cout << CMyData::m_nData << endl;
+		cout << this->m_nData << endl;
+		cout << this->CMyData::m_nData << endl;
 	}
 private:
-	int m_x = 0;
-	int m_y = 0;
+	int m_nData;
 };
 
 int main(int argc, char* argv[]) {
-	CMyPoint ptBegin(110); 
-	ptBegin.Print(); 
-
-	CMyPoint ptEnd(50,250); 
-	ptEnd.Print(); 
+	CMyData a(5), b(10);
+	a.PrintData();
+	b.PrintData();
 	return 0;
 }
-// 132 - ConstructorOver2.cpp - 다른 생성자를 추가로 부르는 생성자 초기화 함수 
+// 139 - ThisPointer.cpp - this 포인터 사용
