@@ -1,22 +1,19 @@
 ﻿#include <iostream>
 using namespace std;
 
-class CTest{
+class CTest {
 public:
-	CTest() {}
-	int m_nData1=10;
-	int m_nData2=20;
-
-	void PrintData(void) {
-		cout << m_nData1 << endl;
-		cout << m_nData2 << endl;
+	CTest() {
+		cout << "CTest::CTest()" << endl;
+	}
+	~CTest() {
+		cout << "~CTest::CTest" << endl;
 	}
 };
-
 int main(int argc, char* argv[]) {
-	CTest t;
-	t.PrintData();
-
+	cout << "Begin" << endl;
+	CTest a;
+	cout << "End" << endl;
 	return 0;
 }
-// 112 - MemberInit5.cpp - c++11의 맴버 변수 초기화 
+// 121 - Constructor1.cpp - 생성자와 소멸자
