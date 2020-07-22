@@ -3,17 +3,16 @@ using namespace std;
 
 class CTest{
 public:
-	CTest() {
-		m_nData = 10;
+	CTest() 
+		:m_nData1(10),m_nData2(20){
 	}
-	int m_nData;
-	void PrintData(void);
+	int m_nData1;
+	int m_nData2;
+	void PrintData(void) {
+		cout << m_nData1 << endl;
+		cout << m_nData2 << endl;
+	}
 };
-
-void CTest::PrintData(void)
-{
-	cout << m_nData << endl;
-}
 
 int main(int argc, char* argv[]) {
 	CTest t;
@@ -21,5 +20,5 @@ int main(int argc, char* argv[]) {
 
 	return 0;
 }
-// 111 - MemberInit3.cpp - 맴버 함수 선언과 정의를 분리
+// 112 - MemberInit4.cpp - 생성자 초기화 목록을 이용한 맴버 변수 초기화
 
