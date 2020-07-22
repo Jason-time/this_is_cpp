@@ -591,3 +591,30 @@ int main(int argc, char* argv[]) {
 }
 // 109 - MemberInit2.cpp - 생성자 함수의 역할
 
+
+#include <iostream>
+using namespace std;
+
+class CTest{
+public:
+	CTest() {
+		m_nData = 10;
+	}
+	int m_nData;
+	void PrintData(void);
+};
+
+void CTest::PrintData(void)
+{
+	cout << m_nData << endl;
+}
+
+int main(int argc, char* argv[]) {
+	CTest t;
+	t.PrintData();
+
+	return 0;
+}
+// 111 - MemberInit3.cpp - 맴버 함수 선언과 정의를 분리
+
+
