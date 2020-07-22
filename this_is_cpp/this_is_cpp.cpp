@@ -1,16 +1,19 @@
 ﻿#include <iostream>
-class USERDATA {
+using namespace std;
+class CTest{
 public:
-	int nAge;
-	char szName[32];
-	void Print(void) {
-		printf("%d, %s\n", nAge, szName);
+	CTest() {
+		m_nData = 10;
+	}
+	int m_nData;
+	void PrintData(void){
+		cout << m_nData << endl;
 	}
 };
 
 int main(int argc, char* argv[]) {
-	USERDATA user = { 10,"철수" };
-	user.Print();
+	CTest t;
+	t.PrintData();
 }
-// 106 - HelloOOP.cpp - 클래스를 이용해 객체지향 프로그램으로 변경
+// 108 - MemberInit1.cpp - 맴버 변수 초기화를 위한 생성자 함수 사용
 
