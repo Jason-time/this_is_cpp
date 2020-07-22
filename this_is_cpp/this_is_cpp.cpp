@@ -3,6 +3,7 @@ using namespace std;
 class CTest{
 public:
 	CTest() {
+		cout << "CTest() : 생성자 함수" << endl;
 		m_nData = 10;
 	}
 	int m_nData;
@@ -12,8 +13,11 @@ public:
 };
 
 int main(int argc, char* argv[]) {
+	cout << "_tmain() 함수 시작" << endl;
 	CTest t;
 	t.PrintData();
+
+	cout << "_tmain() 함수 끝" << endl;
 }
-// 108 - MemberInit1.cpp - 맴버 변수 초기화를 위한 생성자 함수 사용
+// 109 - MemberInit2.cpp - 생성자 함수의 역할
 
